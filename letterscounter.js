@@ -3,24 +3,16 @@ function countLetters(string) {
 
   var characters = {};
 
-  var letter = "h";
-
-  var tracker = 0;
-
-
-  for(i = 0; i < noSpacesString.length; i++) {
-    if(noSpacesString[i] === noSpacesString[a]) {
-      tracker++;
+  for(var i = 0; i < noSpacesString.length; i++) {
+    var letter = noSpacesString[i];
+    if(!characters[letter]) {
+      characters[letter] = 1;
+    } else {
+      characters[letter] += 1;
     }
-
   }
-  console.log(tracker);
-  // characters[noSpacesString[i]] = tracker;
-
-
-  console.log(characters);
-  // return noSpacesString;
+  return characters;
 }
 
 var result = countLetters("lighthouse in the house");
-// console.log(result);
+console.log(result);
